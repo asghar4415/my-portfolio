@@ -224,7 +224,7 @@
     speed: 400,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 3000,
       disableOnInteraction: false
     },
     pagination: {
@@ -241,7 +241,7 @@
     speed: 600,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 4000,
       disableOnInteraction: false
     },
     slidesPerView: 'auto',
@@ -251,6 +251,17 @@
       clickable: true
     }
   });
+
+
+  //email check
+function emailsent()
+{
+  var success = document.getElementsByClassName("sent-message");
+
+  alert(success);
+}
+
+
 
   /**
    * Animation on scroll
@@ -270,3 +281,4 @@
   new PureCounter();
 
 })()
+
