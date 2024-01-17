@@ -55,7 +55,8 @@ section {
 }
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Russo One', sans-serif;
+  font-family: 'Neuton', cursive;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2522,8 +2523,16 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 .btn-outline-primary {
-  color: rgb(5, 99, 187);
-  border-color: rgb(5, 99, 187);
+  
+  background: #3FB1F2;
+background: linear-gradient(to right, #3FB1F2 25%, #2300D1 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  
+  border-color: #3FB1F2;
+  font-weight: 600;
+  font-size: 1rem;
+
 }
 .btn-outline-primary:hover {
   color: #fff;
@@ -3781,7 +3790,8 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #0bceaf;
+  background: rgb(91,233,241);
+background: linear-gradient(90deg, rgba(91,233,241,1) 0%, rgba(34,21,241,1) 91%);
 }
 .nav-fill > .nav-link,
 .nav-fill .nav-item {
@@ -3807,6 +3817,8 @@ input[type="button"].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  font-family: 'Neuton';
+
 }
 .navbar .container,
 .navbar .container-fluid,
@@ -8749,6 +8761,13 @@ button.bg-dark:focus {
 }
 .text-primary {
   color: rgb(5, 99, 187) !important;
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+  
+
 }
 a.text-primary:hover,
 a.text-primary:focus {
@@ -9429,7 +9448,11 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   color: #fff;
-  background: #0563bb;
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+/* -webkit-background-clip: text; */
+/* -webkit-text-fill-color: transparent; */
+
 }
 
 .nav-menu a:hover span,
@@ -9523,21 +9546,24 @@ h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 64px;
+  font-size: 68px;
   font-weight: 700;
   line-height: 56px;
-  color: #45505b;
+  color: #041E42;
+  text-shadow: 6px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 #hero p {
-  color: #45505b;
+  color: #041E42;
   margin: 15px 0 0 0;
-  font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-family: 'Neuton';
+  text-shadow: 6px 5px 10px rgba(0, 0, 0, 0.4);
+
 }
 
 #hero p span {
-  color: #0563bb;
+color: #3457D5;
   letter-spacing: 1px;
 }
 
@@ -9552,6 +9578,8 @@ h6 {
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
+  text-shadow: 6px 5px 10px rgba(0, 0, 0, 0.4);
+
 }
 
 #hero .social-links a:hover {
@@ -9628,13 +9656,6 @@ section {
 # About
 --------------------------------------------------------------*/
 
-@media (max-width:450px)
-{
-  .about{
-    margin-top: -2rem;
-  }
-}
-
 .py-5 {
   padding-top: 2rem !important;
 }
@@ -9652,6 +9673,7 @@ section {
 }
 .col-lg-5, .col-lg-7, .col-sm-6 {
   position: relative;
+  font-family: 'Neuton';
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -9659,6 +9681,13 @@ section {
 .mb-4,
 .my-4 {
   margin-bottom: 1.5rem !important;
+  font-family: 'Neuton';
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
 }
 
 .mb-3,
@@ -9671,6 +9700,8 @@ section {
 .pt-2,
 .py-2 {
   padding-top: 0.5rem !important;
+  font-family: 'Neuton';
+
 }
 .mr-4,
 .mx-4 {
@@ -9683,6 +9714,7 @@ section {
 }
 .col-lg-7 p{
   text-align: justify;
+
 }
 
 .about .content h3 {
@@ -9716,7 +9748,36 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+@media (max-width:450px)
+{
+  .about{
+    margin-top: -2rem;
+  }
+  .mb-4
+  {
+    text-align: center;
+  }
+.col-lg-5 
+{
+  margin: 0 auto;
+}
+.col-lg-5 .img-portrait
+{
+  margin: 0 auto;
+}
+.col-lg-7 p{
+  text-align: center;
 
+}
+.mb-3{
+  text-align: center;
+}
+.about-2
+{
+  display: flex;
+  justify-content: center;
+}
+}
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
@@ -9788,8 +9849,9 @@ section {
 .facts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-family: 'Neuton';
+
+  font-size: 16px;
 }
 
 /*--------------------------------------------------------------
@@ -9798,11 +9860,14 @@ section {
 @media (max-width: 450px){
   .skills{
     margin-top: -6rem;
+  font-family: 'Neuton';
+
   }
 }
 .skills{
-
   margin-top: -6rem;
+  font-family: 'Neuton';
+
 
 }
 .skills .progress {
@@ -9818,7 +9883,8 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Neuton';
+
   color: #45505b;
 }
 
@@ -9836,6 +9902,11 @@ section {
   height: 10px;
   transition: 0.9s;
   background-color: #0563bb;
+
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+/* -webkit-background-clip: text; */
+-webkit-text-fill-color: transparent;
 }
 /*--------------------------------------------------------------
 # Counts
@@ -9885,20 +9956,43 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
   /* margin-top: 10px; */
   /* margin-bottom: 20px; */
-  color: #45505b;
+  font-family: 'Neuton';
+
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
 }
 .resume{
   margin-top : -6rem;
+  font-family: 'Neuton';
+
 }
 
 @media (max-width: 450px){
   .resume{
     margin-top: -6rem;
+  font-family: 'Neuton';
+
+  }
+  #resume .display-1 {
+    font-size: 4.4rem;
+    font-weight: 300;
+    line-height: 1.2;
+
+  }
+  .text-edit
+  {
+    text-align: center;
+    font-size: 1.7rem;
+  
   }
 }
 
@@ -9914,8 +10008,9 @@ section {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: #0563bb;
+  font-family: 'Neuton';
+
+
   margin-bottom: 10px;
 }
 
@@ -9926,6 +10021,8 @@ section {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  font-family: 'Neuton';
+
 }
 
 .resume .resume-item ul {
@@ -9934,6 +10031,8 @@ section {
 
 .resume .resume-item ul li {
   padding-bottom: 10px;
+  font-family: 'Neuton';
+
 }
 
 .resume .resume-item:last-child {
@@ -9958,13 +10057,14 @@ section {
 --------------------------------------------------------------*/
 .portfolio{
   margin-top: -6rem;
-
+  font-family: 'Neuton';
 }
 @media (max-width: 450px){
   #portfolio .display-1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 300;
     line-height: 1.2;
+
   }
 }
 
@@ -9989,7 +10089,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: rgb(5, 99, 187);
+  color:#3457D5;
   background: rgba(255, 255, 255, 0.1);
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
@@ -9998,7 +10098,11 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  background: rgb(5, 99, 187);
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+/* -webkit-background-clip: text; */
+/* -webkit-text-fill-color: transparent; */
+
   color: #fff;
 }
 
@@ -10040,6 +10144,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Neuton';
+
   align-items: center;
 }
 
@@ -10129,6 +10235,8 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+  font-family: 'Neuton';
+
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -10163,12 +10271,33 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
+  font-family: 'Neuton';
+
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
 }
 
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
+
+  
+}
+
+.portfolio-details .portfolio-info ul strong{
+
+
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+  
 }
 
 .portfolio-details .portfolio-info ul li+li {
@@ -10183,6 +10312,13 @@ section {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
+  font-family: 'Neuton';
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
 }
 
 .portfolio-details .portfolio-description p {
@@ -10414,9 +10550,18 @@ section {
 
 @media (max-width: 450px)
 {
+  
+  #contact .display-1 {
+    font-size: 3.9rem;
+    font-weight: 400;
+    line-height: 1.2;
+
+  }
+
   .contact
   {
     margin-top: -6rem;
+    font-family: 'Neuton';
   
   } 
 }
@@ -10438,14 +10583,22 @@ section {
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
+
 }
 
 .contact .info h4 {
   padding: 0 0 0 60px;
+  font-family: 'Neuton';
   font-size: 22px;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 5px;
-  color: #45505b;
+  background: #6EB1FF;
+background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+ 
+
 }
 
 .contact .info p {
@@ -10453,6 +10606,8 @@ section {
   margin-bottom: 0;
   font-size: 14px;
   color: #728394;
+  font-family: 'Neuton';
+
 }
 
 .contact .info .email,
@@ -10522,6 +10677,8 @@ section {
   border-radius: 4px;
   box-shadow: none;
   font-size: 14px;
+  font-family: 'Neuton';
+
 }
 
 .contact .php-email-form input[type=text],
@@ -10534,16 +10691,26 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #0563bb;
+  background: #6EB1FF;
+  background: linear-gradient(to right, #6EB1FF 0%, #1F00B8 100%);
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  
   border: 0;
   padding: 10px 35px;
   color: #fff;
   transition: 0.4s;
   border-radius: 50px;
+  font-family: 'Neuton';
+
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #0678e3;
+  background: #6EB1FF;
+background: linear-gradient(to left, #6EB1FF 0%, #1F00B8 100%);
+/* -webkit-background-clip: text; */
+/* -webkit-text-fill-color: transparent; */
+
 }
 
 @keyframes animate-loading {
@@ -10562,22 +10729,25 @@ section {
 #footer {
   background: #f7f8f9;
   color: #45505b;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   padding: 30px 0;
+  font-family: 'Neuton';
+
 }
 
 #footer h3 {
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Neuton';
+
   padding: 0;
   margin: 0 0 15px 0;
 }
 
 #footer p {
-  font-size: 15;
+  font-size: 15px;
   font-style: italic;
   padding: 0;
   margin: 0 0 40px 0;
@@ -10588,7 +10758,7 @@ section {
 }
 
 #footer .social-links a {
-  font-size: 18px;
+  font-size: 30px;
   display: inline-block;
   background: #0563bb;
   color: #fff;
@@ -10613,5 +10783,5 @@ section {
 }
 
 #footer .credits {
-  font-size: 13px;
+  font-size: 15px;
 }
